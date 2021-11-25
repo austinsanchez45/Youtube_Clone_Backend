@@ -68,3 +68,21 @@ class Like(APIView):
             serializer.save()
             return Response(serializer.data, status = status.HTTP_201_CREATED)
         return Response(serializer.errors, status = status.HTTP_400_BAD_REQUEST)
+    
+class Dislike(APIView):
+    
+    def get_Comment(self, pk):
+        try:
+            return Comment.objects.get(pk=pk)
+        except:
+            raise Http404    
+    
+    def patch(self, request, pk):
+        comment = self.get_Comment(pk)
+        comment.dislike += 1
+        serializer = YoutubeSerializer(comment, data = request.data, partial = True)    
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status = status.HTTP_201_CREATED)
+        return Response(serializer.errors, status = status.HTTP_400_BAD_REQUEST)
+    
