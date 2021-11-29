@@ -1,4 +1,4 @@
-![Screenshot (59)](https://user-images.githubusercontent.com/91759734/143931504-ceb8bf14-b471-43ea-9d5b-214b633073a4.png)
+![Screenshot (60)](https://user-images.githubusercontent.com/91759734/143932723-1a816c00-a819-4d2b-a40c-72f594cda267.png)
 
 Learning objective: Use React.js, Axios, and CSS to build a responsive YouTube clone app to search for
 YouTube videos, channels, playlists, and live events via wrapper around Google YouTube API.
