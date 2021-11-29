@@ -14,7 +14,7 @@ class VideoList(APIView):
         return Response(serializer.data)
     
     def post(self, request):
-        serializer = YoutubeSerializer(data = request.data)
+        serializer = YoutubeSerializer(data = request.data, many = True)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status = status.HTTP_201_CREATED)
