@@ -116,5 +116,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 try:
     from youtube_clone_project.local_settings import *
-except ImportError:
+except:
     pass
