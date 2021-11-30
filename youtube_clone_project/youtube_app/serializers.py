@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import BackendData, Comments
+from .models import BackendData
 
 class YoutubeSerializer(serializers.ModelSerializer):
     class Meta:

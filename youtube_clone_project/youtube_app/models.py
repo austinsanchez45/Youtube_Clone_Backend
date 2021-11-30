@@ -12,4 +12,4 @@ class BackendData(models.Model):
     videoId = models.CharField(max_length=25, primary_key=True)
     likes = models.IntegerField(default=0)
     dislikes = models.IntegerField(default=0)
-    comments = models.ForeignKey(Comments, on_delete=models.CASCADE, blank=True, null=True)    
+    comments = models.ManyToManyField(Comments)    
