@@ -46,4 +46,3 @@ class VideoDetails(APIView):
         video_details = self.get_video_details(pk)
         video_details.delete()
         return Response(status = status.HTTP_204_NO_CONTENT)
-  
